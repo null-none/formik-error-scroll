@@ -1,0 +1,60 @@
+{
+  "name": "formik-error-scroll",
+  "version": "1.0.0",
+  "description": "Scroll to the first error in your Formik form and set focus",
+  "main": "dist/formik-error-scroll.js",
+  "source": "src/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "postversion": "npm publish",
+    "preversion": "npm run test",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "lint": "standard --fix",
+    "coverage": "jest --coverage",
+    "build": "microbundle -o dist/ --sourcemap false --compress false --jsx React.createElement --format cjs",
+    "dev": "microbundle watch -o dist/ --sourcemap false --compress false --jsx React.createElement --format cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "formik",
+    "errors",
+    "scroll",
+    "scroll-to",
+    "focus"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "7.13.0",
+    "@babel/preset-env": "7.14.4",
+    "@babel/preset-react": "7.13.13",
+    "babel-eslint": "10.0.3",
+    "babel-jest": "27.0.2",
+    "babel-polyfill": "6.26.0",
+    "formik": "1.5.8",
+    "jest": "27.0.3",
+    "microbundle": "0.13.1",
+    "react": "16.11.0",
+    "react-basic-error-boundary": "1.1.0",
+    "@testing-library/react": "11.2.7",
+    "react-dom": "17.0.2",
+    "standard": "16.0.3"
+  },
+  "peerDependencies": {
+    "formik": "^2.2.8",
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "scroll-to-element": "^2.0.3"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": "dist",
+    "env": {
+      "jest": true,
+      "browser": true
+    }
+  }
+}
